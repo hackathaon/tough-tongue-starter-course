@@ -1,4 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tough Tongue AI - NextJS Starter Boilerplate
+
+This is a [Next.js](https://nextjs.org) boilerplate project for building voice AI applications using [Tough Tongue AI](https://app.toughtongueai.com/).
+
+## About Tough Tongue AI
+
+Tough Tongue AI helps you practice tough conversations through AI-powered role play. Key features include:
+
+- **Video Input Capability**: Practice and receive feedback on your nonverbal cues—facial expressions, posture, and gestures
+- **High-Quality Audio**: Superior audio input/output quality and low latency compared to other AI conversation apps
+- **24/7 Availability**: Practice anytime—whether late at night or right before an important meeting
+
+## Use Cases
+
+- **Interview Preparation**: Practice with realistic interview scenarios
+- **Professional Coaching**: Practice salary negotiations, performance reviews, and conflict resolution
+- **Sales Training**: Improve your pitch and objection handling skills
+
+## API Integration
+
+- **API Documentation**: [https://app.toughtongueai.com/docs/api-integration/](https://app.toughtongueai.com/docs/api-integration/)
+- **Create API Key**: [https://app.toughtongueai.com/developer/](https://app.toughtongueai.com/developer/)
 
 ## Getting Started
 
