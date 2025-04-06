@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 export default function Header() {
   const pathname = usePathname();
@@ -29,7 +30,16 @@ export default function Header() {
               Course
             </Link>
           </nav>
-          <div></div>
+          <div className="flex justify-end">
+            <SignedOut>
+              <Link href="/sign-in" className="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700">
+                Sign In
+              </Link>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+          </div>
         </div>
       </div>
     </header>
