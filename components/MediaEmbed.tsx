@@ -112,7 +112,7 @@ export function MediaEmbed({
 
   return (
     <Card className="w-full overflow-hidden">
-      <CardContent className={`p-0 ${aspectRatioClass}`}>
+      <CardContent className={`p-0 ${type === "toughtongue" ? "" : aspectRatioClass}`}>
         {renderEmbed()}
         {isLoading && type !== "placeholder" && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
