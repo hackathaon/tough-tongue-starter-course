@@ -4,13 +4,16 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlayCircle } from "lucide-react";
 
-type MediaEmbedType = "loom" | "youtube" | "iframe" | "placeholder";
+type MediaEmbedType = "loom" | "youtube" | "iframe" | "toughtongue" | "placeholder";
 
 interface MediaEmbedProps {
   type?: MediaEmbedType;
   url?: string;
   title?: string;
   aspectRatio?: "16:9" | "4:3" | "1:1";
+  height?: string;
+  allow?: string;
+  frameBorder?: string;
 }
 
 export function MediaEmbed({
@@ -18,6 +21,9 @@ export function MediaEmbed({
   url = "",
   title = "Video content",
   aspectRatio = "16:9",
+  height,
+  allow = "",
+  frameBorder = "0",
 }: MediaEmbedProps) {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -61,6 +67,21 @@ export function MediaEmbed({
           />
         );
       
+      case "toughtongue":
+        // ToughTongueAI specific embed
+        return (
+          <iframe
+            src={url}
+            title={title}
+            width="100%"
+            height={height || "700px"}
+            frameBorder={frameBorder}
+            allow="microphone; camera; display-capture"
+            className="w-full border-0"
+            onLoad={() => setIsLoading(false)}
+          />
+        );
+      
       case "iframe":
         // Generic iframe embed
         return (
@@ -70,6 +91,9 @@ export function MediaEmbed({
             allowFullScreen
             className="w-full h-full border-0"
             onLoad={() => setIsLoading(false)}
+            height={height}
+            allow={allow}
+            frameBorder={frameBorder}
           />
         );
       

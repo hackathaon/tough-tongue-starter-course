@@ -14,7 +14,7 @@ import { MediaEmbed } from "@/components/MediaEmbed";
 import { cn } from "@/lib/utils";
 import { CourseSidebar } from "@/components/course/CourseSidebar";
 
-type MediaEmbedType = "loom" | "youtube" | "iframe" | "placeholder";
+type MediaEmbedType = "loom" | "youtube" | "iframe" | "toughtongue" | "placeholder";
 
 interface Lesson {
   id: string;
@@ -34,53 +34,32 @@ const courseData: Course = {
   title: "Product Management Interview Preparation",
   lessons: [
     {
-      id: "about-course",
-      title: "About the Course",
-      duration: "0:58",
-      videoUrl: "https://www.youtube.com/watch?v=example1",
-      mediaType: "youtube"
-    },
-    {
-      id: "generic-interview-structure",
-      title: "Generic Interview Structure: Beginning, Middle, End",
-      duration: "4:47",
-      videoUrl: "https://www.youtube.com/watch?v=example2",
-      mediaType: "youtube"
-    },
-    {
-      id: "beginning-question-types",
-      title: "Beginning: Different Question Types",
-      duration: "2:30",
-      videoUrl: "https://www.youtube.com/watch?v=example3",
-      mediaType: "youtube"
-    },
-    {
-      id: "middle-brainstorming",
-      title: "Middle: Brainstorming Techniques",
+      id: "favorite-product-question",
+      title: "Introduction to Favorite Product Question",
       duration: "5:00",
       videoUrl: "https://www.youtube.com/watch?v=example4",
       mediaType: "youtube"
     },
     {
-      id: "end-conclude",
-      title: "End: How to conclude",
-      duration: "2:02",
-      videoUrl: "https://www.youtube.com/watch?v=example5",
-      mediaType: "youtube"
-    },
-    {
-      id: "product-design-intro",
-      title: "Introduction to Product Design",
+      id: "answer-favorite-product-question",
+      title: "Get your questions answered by AI",
       duration: "1:31",
-      videoUrl: "https://www.youtube.com/watch?v=example6",
-      mediaType: "loom"
+      videoUrl: "https://app.toughtongueai.com/embed/677e5dbd261d3f3e3803b968?bg=black&skipPrecheck=true",
+      mediaType: "toughtongue"
     },
     {
-      id: "how-to-answer",
-      title: "How to answer Product Design questions?",
-      duration: "3:22",
-      videoUrl: "https://www.youtube.com/watch?v=example7",
-      mediaType: "iframe"
+      id: "practice-favorite-product-question",
+      title: "Practice Favorite Product Question",
+      duration: "10:00",
+      videoUrl: "https://app.toughtongueai.com/embed/677e7676de365dba3af0055a?bg=black&skipPrecheck=true",
+      mediaType: "toughtongue"
+    },
+    {
+      id: "practice-favorite-product-question-2",
+      title: "Practice Favorite Product Question 2",
+      duration: "10:00",
+      videoUrl: "https://app.toughtongueai.com/embed/67b0248abc39997a6c6a4cc7?bg=black&skipPrecheck=true",
+      mediaType: "toughtongue"
     }
   ]
 };
