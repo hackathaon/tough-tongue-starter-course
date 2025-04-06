@@ -1,20 +1,21 @@
-# Tough Tongue AI - NextJS Starter Boilerplate
+# Tough Tongue AI - Course Creation Boilerplate
 
-This is a [Next.js](https://nextjs.org) boilerplate project for building voice AI applications using [Tough Tongue AI](https://app.toughtongueai.com/).
+This is a [Next.js](https://nextjs.org) boilerplate project for creating interactive online courses powered by [Tough Tongue AI](https://app.toughtongueai.com/).
 
-## About Tough Tongue AI
+## About This Boilerplate
 
-Tough Tongue AI helps you practice tough conversations through AI-powered role play. Key features include:
+This template provides a starting point for building voice-enabled course websites using Tough Tongue AI. It serves as a sample prototype that demonstrates:
 
-- **Video Input Capability**: Practice and receive feedback on your nonverbal cues—facial expressions, posture, and gestures
-- **High-Quality Audio**: Superior audio input/output quality and low latency compared to other AI conversation apps
-- **24/7 Availability**: Practice anytime—whether late at night or right before an important meeting
+- **Course Landing Page**: Customizable template with placeholders for course name, modules, and benefits
+- **Voice-Powered Learning**: Integration with Tough Tongue AI's conversational capabilities for interactive learning
+- **Modern UI Components**: Ready-to-use components designed specifically for course creators
 
-## Use Cases
+## Features for Course Creators
 
-- **Interview Preparation**: Practice with realistic interview scenarios
-- **Professional Coaching**: Practice salary negotiations, performance reviews, and conflict resolution
-- **Sales Training**: Improve your pitch and objection handling skills
+- **Interactive Learning Modules**: Create conversation-based learning modules where students can practice with AI
+- **Customizable Course Structure**: Easily modify course modules, descriptions, and learning objectives
+- **Enrollment Management**: Built-in components for course registration and student onboarding
+- **Responsive Design**: Mobile-friendly interface that works across all devices
 
 ## API Integration
 
@@ -37,7 +38,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start customizing your course by modifying `app/page.tsx`. Replace the placeholder text with your course name, module descriptions, and unique selling points.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
@@ -55,3 +56,19 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## About Tough Tongue AI
+
+Tough Tongue AI helps you practice tough conversations through AI-powered role play. Key features include:
+
+- **Video Input Capability**: Practice and receive feedback on your nonverbal cues—facial expressions, posture, and gestures
+- **High-Quality Audio**: Superior audio input/output quality and low latency compared to other AI conversation apps
+- **24/7 Availability**: Practice anytime—whether late at night or right before an important meeting
+
+### Common Use Cases
+
+- **Interview Preparation**: Practice with realistic interview scenarios
+- **Professional Coaching**: Practice salary negotiations, performance reviews, and conflict resolution
+- **Sales Training**: Improve your pitch and objection handling skills
+- **Language Learning**: Practice conversations in new languages with patient AI tutors
+- **Public Speaking**: Rehearse presentations and receive feedback on delivery
