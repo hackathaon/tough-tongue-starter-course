@@ -11,8 +11,13 @@
 1. Run `npm run dev`
 1. Open the URL http://localhost:3000 in the browser
 
-
 ## Deployment
+1. Instructions Video - https://www.tella.tv/video/getting-started-with-hackathon-boilerplate-15w5
 1. Sign up for Github on https://github.com/
 1. Create a public repository on Github
+1. Copy the URL of the repository you created and run the command `git remote set-url origin <YOUR REPOSITORY URL>`
+1. Run `git push`
 1. Sign up for Vercel on https://vercel.com/
+1. Sign in using Github
+1. Create a new team and project and select your newly created repository
+1. Deploy and View your project
