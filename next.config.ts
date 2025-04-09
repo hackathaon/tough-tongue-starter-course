@@ -8,7 +8,7 @@ const ContentSecurityPolicy = `
   img-src * blob: data:;
   connect-src *;
   font-src 'self';
-  frame-src app.toughtongueai.com
+  frame-src app.toughtongueai.com https://www.youtube.com
 `
 
 const nextConfig: NextConfig = {

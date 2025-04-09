@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { 
-  PlayCircle, 
+import {
+  PlayCircle,
   ChevronLeft,
   ChevronRight,
   Menu,
@@ -35,9 +35,9 @@ const courseData: Course = {
   lessons: [
     {
       id: "favorite-product-question",
-      title: "Introduction to Favorite Product Question",
+      title: "Integrate Voice agent into the website",
       duration: "5:00",
-      videoUrl: "https://www.youtube.com/watch?v=example4",
+      videoUrl: "https://www.youtube.com/watch?v=CkhXgec-iHI",
       mediaType: "youtube"
     },
     {
@@ -65,11 +65,11 @@ const courseData: Course = {
 };
 
 // Course content component
-const CourseContent = ({ 
-  lesson, 
-  onPrevious, 
-  onNext 
-}: { 
+const CourseContent = ({
+  lesson,
+  onPrevious,
+  onNext
+}: {
   lesson: Lesson;
   onPrevious: () => void;
   onNext: () => void;
@@ -78,52 +78,52 @@ const CourseContent = ({
     <div className="flex-1 overflow-auto p-6">
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="flex items-center justify-between">
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={onPrevious}
             className="md:hidden"
             aria-label="Previous lesson"
           >
             <ChevronLeft className="h-5 w-5" />
           </Button>
-          <Button 
-            variant="outline" 
-            size="sm" 
+          <Button
+            variant="outline"
+            size="sm"
             onClick={onPrevious}
             className="hidden md:flex"
           >
             Previous
           </Button>
-          
+
           <h1 className="text-xl md:text-2xl font-bold truncate">{lesson.title}</h1>
-          
-          <Button 
-            variant="ghost" 
-            size="icon" 
+
+          <Button
+            variant="ghost"
+            size="icon"
             onClick={onNext}
             className="md:hidden"
             aria-label="Next lesson"
           >
             <ChevronRight className="h-5 w-5" />
           </Button>
-          <Button 
-            variant="default" 
-            size="sm" 
+          <Button
+            variant="default"
+            size="sm"
             onClick={onNext}
             className="hidden md:flex"
           >
             Next
           </Button>
         </div>
-        
-        <MediaEmbed 
+
+        <MediaEmbed
           type={lesson.mediaType}
           url={lesson.videoUrl}
           title={lesson.title}
           aspectRatio="16:9"
         />
-        
+
         <div className="prose dark:prose-invert max-w-none">
           <p>
             Answers to any interview question has three distinct parts: beginning, middle, and end. Each
@@ -139,15 +139,15 @@ export default function CourseClient() {
   const [activeLesson, setActiveLesson] = useState(courseData.lessons[1].id);
   const currentLesson = courseData.lessons.find(l => l.id === activeLesson) || courseData.lessons[0];
   const [showSidebar, setShowSidebar] = useState(false);
-  
+
   const currentIndex = courseData.lessons.findIndex(l => l.id === activeLesson);
-  
+
   const handlePrevious = () => {
     if (currentIndex > 0) {
       setActiveLesson(courseData.lessons[currentIndex - 1].id);
     }
   };
-  
+
   const handleNext = () => {
     if (currentIndex < courseData.lessons.length - 1) {
       setActiveLesson(courseData.lessons[currentIndex + 1].id);
@@ -170,13 +170,13 @@ export default function CourseClient() {
           <Menu className="h-5 w-5" />
         )}
       </Button>
-      
+
       {/* Sidebar */}
       <div className={cn(
         "absolute md:relative inset-0 z-40 md:z-auto",
         showSidebar ? "block" : "hidden md:block"
       )}>
-        <CourseSidebar 
+        <CourseSidebar
           course={courseData}
           activeLesson={activeLesson}
           setActiveLesson={(id) => {
@@ -185,10 +185,10 @@ export default function CourseClient() {
           }}
         />
       </div>
-      
+
       {/* Content */}
-      <CourseContent 
-        lesson={currentLesson} 
+      <CourseContent
+        lesson={currentLesson}
         onPrevious={handlePrevious}
         onNext={handleNext}
       />
